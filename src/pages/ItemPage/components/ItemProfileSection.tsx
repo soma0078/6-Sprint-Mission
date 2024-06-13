@@ -3,6 +3,7 @@ import { LineDivider } from '../../../styles/CommonStyles';
 import TagDisplay from './TagDisplay';
 import LikeButton from './LikeButton';
 import { ReactComponent as SeeMoreIcon } from '../../../assets/images/icons/ic_kebab.svg';
+import { Product } from '../../../types/ProductTypes';
 
 const SectionContainer = styled.section`
   /* 모바일에선 이미지와 상세내용 섹션이 위아래로 배치되어 있다가, 타블렛부터는 같은 줄로 flex */
@@ -103,19 +104,11 @@ const TagDisplaySection = styled.div`
   margin: 24px 0;
 `;
 
-type Product = {
-  images: string;
-  name: string;
-  price: number;
-  description: string;
-  id: string;
-  productId: string;
-  isFavorite: boolean;
-  tags: string[];
-  favoriteCount: number;
-};
+interface ItemProfileSectionProps {
+  product: Product;
+}
 
-function ItemProfileSection({ product }: { product: Product }) {
+function ItemProfileSection({ product }: ItemProfileSectionProps) {
   return (
     <SectionContainer>
       <ItemImage>

@@ -33,7 +33,11 @@ const ThreadContainer = styled.div`
   margin-bottom: 40px;
 `;
 
-function CommentThread({ productId }: { productId: string }) {
+type CommentThreadProps = {
+  productId: number;
+};
+
+function CommentThread({ productId }: CommentThreadProps) {
   const [comments, setComments] = useState<Comments[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string>('');

@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import ItemCard from './ItemCard';
 import { getProducts } from '../../../api/itemApi';
 import LoadingSpinner from '../../../components/UI/LoadingSpinner';
-import { Item } from '../../../types/ItemTypes';
+import { Item, OrderBy } from '../../../types/ItemTypes';
 
 const getPageSize = () => {
   const width = window.innerWidth;
@@ -19,7 +19,7 @@ const getPageSize = () => {
 };
 
 interface FetchSortedDataParams {
-  orderBy: string;
+  orderBy: OrderBy;
   pageSize: number;
 }
 

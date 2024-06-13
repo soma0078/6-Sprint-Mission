@@ -9,7 +9,7 @@ export type Item = {
 export type OrderBy = 'recent' | 'favorite';
 
 export type LikeButtonProps = {
-  productId: string;
+  productId: number;
   isFavorite: boolean;
   favoriteCount: number;
 };

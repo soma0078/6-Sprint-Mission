@@ -23,7 +23,7 @@ const getPageSize = () => {
 };
 
 type FetchDataParams = {
-  orderBy: string;
+  orderBy: OrderBy;
   page: number;
   pageSize: number;
 };

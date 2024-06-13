@@ -2,6 +2,7 @@
   "name": "1-weekly-mission",
   "version": "0.1.0",
   "private": true,
+  "module": "module",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
@@ -39,6 +40,6 @@
     ]
   },
   "devDependencies": {
-    "typescript": "^5.4.5"
+    "typescript": "5.0"
   }
 }

@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 import { LineDivider } from '../../../styles/CommonStyles';
 import TagDisplay from './TagDisplay';
@@ -104,7 +103,7 @@ const TagDisplaySection = styled.div`
   margin: 24px 0;
 `;
 
-interface Product {
+type Product = {
   images: string;
   name: string;
   price: number;
@@ -114,7 +113,7 @@ interface Product {
   isFavorite: boolean;
   tags: string[];
   favoriteCount: number;
-}
+};
 
 function ItemProfileSection({ product }: { product: Product }) {
   return (

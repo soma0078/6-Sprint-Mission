@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import ItemCard from './ItemCard';
 import { getProducts } from '../../../api/itemApi';
 import LoadingSpinner from '../../../components/UI/LoadingSpinner';
+import { Item } from '../../../types/ItemTypes';
 
 const getPageSize = () => {
   const width = window.innerWidth;
@@ -20,14 +21,6 @@ const getPageSize = () => {
 interface FetchSortedDataParams {
   orderBy: string;
   pageSize: number;
-}
-
-interface Item {
-  id: number;
-  name: string;
-  images: string;
-  favoriteCount: number;
-  price: number;
 }
 
 function BestItemsSection() {

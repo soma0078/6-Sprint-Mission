@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { getProductComments } from '../../../api/itemApi';
 import styled from 'styled-components';
 import { ReactComponent as EmptyStateImage } from '../../../assets/images/ui/empty-comments.svg';
@@ -6,6 +6,7 @@ import { ReactComponent as SeeMoreIcon } from '../../../assets/images/icons/ic_k
 import DefaultProfileImage from '../../../assets/images/ui/ic_profile.svg';
 import { LineDivider } from '../../../styles/CommonStyles';
 import { formatUpdatedAt } from '../../../utils/dateUtils';
+import { Writer, Comments, CommentItemProps } from '../../../types/CommentTypes';
 
 const CommentContainer = styled.div`
   padding: 24px 0;
@@ -48,22 +49,6 @@ const Timestamp = styled.p`
   color: ${({ theme }) => theme.colors.gray[400]};
   font-size: 12px;
 `;
-
-interface Writer {
-  image: string;
-  nickname: string;
-}
-
-interface Comments {
-  id: string;
-  writer: Writer;
-  content: string;
-  updatedAt: string;
-}
-
-interface CommentItemProps {
-  item: Comments;
-}
 
 const CommentItem = ({ item }: CommentItemProps) => {
   const authorInfo = item.writer;

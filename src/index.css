@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .btn {
+    @apply text-secondary-100 bg-primary-100 hover:bg-primary-200 active:bg-primary-200 rounded-full h-[56px] cursor-pointer;
+  }
+
+  .input {
+    @apply block bg-secondary-100 outline-primary-100 font-normal w-full h-14 mt-4 inner-p rounded;
+  }
+
+  .inner-p {
+    @apply px-6 py-4;
+  }
+}
